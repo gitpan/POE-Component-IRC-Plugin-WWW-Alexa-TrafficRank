@@ -1,0 +1,12 @@
+Build.PL
+Changes
+MANIFEST
+README
+lib/POE/Component/IRC/Plugin/WWW/Alexa/TrafficRank.pm
+t/00-load.t
+examples/rank_bot.pl
+t/kwalitee.t
+t/pod-coverage.t
+t/pod.t
+Makefile.PL
+META.yml

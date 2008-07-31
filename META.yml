@@ -1,0 +1,22 @@
+---
+name: POE-Component-IRC-Plugin-WWW-Alexa-TrafficRank
+version: 0.0101
+author:
+  - 'Zoffix Znet <zoffix@cpan.org>'
+abstract: get traffic rank for pages via your IRC bot
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  POE::Component::IRC::Plugin::BasePoCoWrap: 0.003
+  POE::Component::WWW::Alexa::TrafficRank: 0.001
+build_requires:
+  Test::More: 0
+provides:
+  POE::Component::IRC::Plugin::WWW::Alexa::TrafficRank:
+    file: lib/POE/Component/IRC/Plugin/WWW/Alexa/TrafficRank.pm
+    version: 0.0101
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
