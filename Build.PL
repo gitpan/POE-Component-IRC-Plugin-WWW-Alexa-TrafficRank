@@ -13,9 +13,14 @@ my $builder = Module::Build->new(
     requires => {
         'POE::Component::IRC::Plugin::BasePoCoWrap' => 0.003,
         'POE::Component::WWW::Alexa::TrafficRank'   => 0.001,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'POE-Component-IRC-Plugin-WWW-Alexa-TrafficRank-*' ],
     create_makefile_pl => 'traditional',
 );
+if ( $ENV{RELEASE_TESTING} ) {
+    system('pod2text lib/POE/Component/IRC/Plugin/WWW/Alexa/TrafficRank.pm > README');
+}
 
 $builder->create_build_script();

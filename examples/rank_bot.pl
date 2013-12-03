@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 use lib qw(../lib lib);
 use POE qw(Component::IRC  Component::IRC::Plugin::WWW::Alexa::TrafficRank);
@@ -13,6 +13,7 @@ my $irc = POE::Component::IRC->spawn(
     server      => 'irc.freenode.net',
     port        => 6667,
     ircname     => 'Alexa Traffic Rank',
+    debug       => 1,
 );
 
 POE::Session->create(
